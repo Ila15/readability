@@ -43,7 +43,7 @@ class Readability:
     def FleschReadingEase(self):
         score = 0.0 
         if self.analyzedVars['word_cnt'] > 0.0:
-            score = 206.835 - (1.015 * (self.analyzedVars['avg_words_p_sentence'])) - (84.6 * (self.analyzedVars['syllable_cnt']/ self.analyzedVars['word_cnt']))
+            score = 180 - (self.analyzedVars['avg_words_p_sentence']) - (58.5 * (self.analyzedVars['syllable_cnt']/ self.analyzedVars['word_cnt']))
         return round(score, 4)
         
     def FleschKincaidGradeLevel(self):
